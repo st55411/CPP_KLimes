@@ -21,6 +21,16 @@ void Model::PhoneBook::AddPerson(Entity::Person person)
 	last = element;
 }
 
+void Model::PhoneBook::DeletePhoneBook(PhoneBook* phonebook )
+{
+	Element* element = first;
+	while (element != nullptr) {
+		Element* el = element->next;
+		delete element;
+		element = el;
+	}
+}
+
 std::string Model::PhoneBook::FindTelephoneNumber(std::string name) const
 {
 	Element* element = first;
