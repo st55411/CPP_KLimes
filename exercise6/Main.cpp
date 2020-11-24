@@ -7,30 +7,30 @@
 
 
 int main() {
-	GrowingContainer<std::string, 3> cont = GrowingContainer<std::string, 3>();
-	for (int i = 0; i < 10; i++)
+	GrowingContainer<std::string, 2> container = GrowingContainer<std::string, 2>();
+	for (int i = 0; i < 9; i++)
 	{
-		cont.add("Nmbr: " + std::to_string(i));
-		std::cout << cont[i] << std::endl;
+		container.add("Nmbr: " + std::to_string(i));
+		std::cout << container[i] << std::endl;
 	}
 	std::cout << "--------" << std::endl;
-	std::cout << cont.count() << std::endl << std::endl;
-	for (int i = 0; i < cont.count(); i++)
+	std::cout << container.count() << std::endl << std::endl;
+	for (int i = 0; i < container.count(); i++)
 	{
-		std::cout << cont[i] << std::endl;
+		std::cout << container[i] << std::endl;
 	}
 	std::cout << "--------" << std::endl;
-	std::cout << cont.count() << std::endl << std::endl;
+	std::cout << container.count() << std::endl << std::endl;
 
-	cont.remove(9);
-	cont.addTo(9, std::to_string(18));
+	container.remove(8);
+	container.addTo(8, std::to_string(17));
 	
-	for (int i = 0; i < cont.count(); i++)
+	for (int i = 0; i < container.count(); i++)
 	{
-		std::cout << cont[i] << std::endl;
+		std::cout << container[i] << std::endl;
 	}
 	std::cout << "--------" << std::endl;
-	std::cout <<  cont.count() << std::endl << std::endl;
+	std::cout <<  container.count() << std::endl << std::endl;
 
 	return 0;
 }
